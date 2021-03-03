@@ -34,9 +34,7 @@ Start Your Business With Kalam Academy
 	</platform>
 -->
 
-    <platform name="android">
-		<icon src="icon.png"/> 
-    </platform>
+  
    
     
     <access origin="*" />
