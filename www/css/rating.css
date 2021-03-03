@@ -1,0 +1,61 @@
+fieldset,
+label {
+    margin: 0;
+    padding: 0;
+}
+.rating {
+    border:none;
+    padding-right:33px;
+}
+.rating>[id^="star"] {
+    display: none;
+}
+
+.rating>label:before {
+    margin: 5px;
+    font-size: 20px;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+
+.rating>.half:before {
+    content: "\f089";
+    position: absolute
+}
+
+.rating>label {
+    color: #ddd;
+    float: right;
+    margin-top:-13px;
+    margin-bottom:-13px;
+}
+
+.rating>[id^="star"]:checked~label,
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: #FFD700
+}
+
+.rating>[id^="star"]:checked+label:hover,
+.rating>[id^="star"]:checked~label:hover,
+.rating>label:hover~[id^="star"]:checked~label,
+.rating>[id^="star"]:checked~label:hover~label {
+    color: #FFD700
+}
+
+.reset-option {
+    display: none
+}
+
+.reset-button {
+    margin: 6px 12px;
+    background-color: rgb(255, 255, 255);
+    text-transform: uppercase
+}
+
+.btn:focus {
+    outline: none
+}
+
+

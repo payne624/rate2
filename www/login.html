@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login - Kalam Services</title>
+     <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/cdn/css/bootstrap.min.css">
+    <link href="css/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style-loader.css"/>  
+    <script type="text/javascript">
+	var value = window.localStorage.getItem("login");
+	if(value=='true'){
+		window.location.href="home.html";
+	}
+	
+</script>
+<style>
+.verify-link{
+	position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FFF;
+    border: none;
+    color: #ed363a;
+    font-size: 12px;
+    height: 34px;
+    font-weight: 600;
+    border-radius: 3px;
+    line-height: 34px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+label {
+    display: flex;
+    margin-bottom: .5rem;
+}
+</style>
+
+  </head>
+
+
+  <body id="body" class="inde">
+    <div class="loader">
+		<div class="loader-box">
+			<label>
+				<div class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+			</label>
+		</div>
+	</div>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4"></div>
+              <div class="col-lg-4 col-12 logi" style="padding-bottom:12.5%;">
+                  <div class="row">
+                      <div class="col-lg-4"></div>
+                      <div class="col-lg-4">
+                  
+                          </div>
+             <div class="col-lg-4"></div>
+                      </div>
+      <div class="row ">
+      <div class="col-lg-12 logi">  
+    <img src="image/kalam.png" class="mx-auto d-block img-fluid logo" alt="Image not available" width="140">
+        <!-- <h1 class="mx-auto d-block img-fluid logo" width="140">MAN POWER</h1>-->
+          </div>
+      </div> 
+      <div class="row ">
+           <div class="col-md-12  logi">
+               <div class="row">
+        <div class="col-6 text-right border-right">
+          <span class="btn btn-sm rounded-0 button shadow-sm signuptabBtn text-light border-white" onclick="signupTab()">Sign Up</span>
+        </div>
+        <div class="col-6 border-left">
+          <span class="btn btn-sm rounded-0 button shadow-sm logintabBtn text-light" onclick="loginTab()">Login</span>
+        </div>
+            </div>       
+        </div>
+            
+      </div>
+                  
+      <!-- mx-2 -->
+      <div class="row mt-4"> 
+          
+        <div class="col-lg-12 col-sm-12  logi">
+          <div class="login_form">
+            <div class="card-body">
+
+              <!-- Signup form start -->
+              <form id="signup_Tab">
+
+                <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text ks-account" id="basic-addon1"><i class="fas fa-user-alt"></i></span>
+             </div>
+             <input type="text" class="form-control ks-input" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="S_name">
+                </div>
+
+          <!--       <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text shadow-sm border-0 rounded-0 bg-primary text-white">
+                        <i class="fa fa-user"></i>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control border-0 shadow-sm rounded-0" placeholder="Full Name" id="S_name">
+                  </div>
+                </div> -->
+                 <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text ks-account" id="basic-addon1"><i class="fas fa-mobile"></i></span>
+             </div>
+             <input type="text" class="form-control ks-input" placeholder="Mobile number" aria-label="Username" aria-describedby="basic-addon1" id="S_mobile">
+                </div>
+
+                <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text ks-account" id="basic-addon1"><i class="fas fa-key"></i></span>
+             </div>
+             <input type="password" class="form-control ks-input" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" id="S_password">
+                </div>
+                
+                <label style="color:white">Do you have referral code?</label>
+                <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text ks-account" id="basic-addon1"><i class="fas fa-unlock-alt" aria-hidden="true"></i></span>
+             </div>
+             <input type="text" class="form-control ks-input" placeholder="Referral Code" aria-label="Username" aria-describedby="basic-addon1" id="Ref_Code">
+             <button style="width:50px;"><a href="javascript:void(0)" class="verify-link" onclick="verifyrefcode();" id="apply-btn">Verify</a></button>
+                </div>
+                <!-- <fieldset>
+				<label>Do you have referral code?</label>
+				<div class="form-group">
+					<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+					<input type="text" placeholder="Referral Code" class="form-control" id="Ref_Code">
+					<a href="javascript:void(0)" class="verify-link" onclick="verifyrefcode();" id="apply-btn">Verify</a>
+				</div>
+			</fieldset>-->
+        <!--         <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text shadow-sm border-0 rounded-0 bg-primary text-white">
+                        <i class="fa fa-lock"></i>
+                      </div>
+                    </div>
+                    <input type="password" class="form-control border-0 rounded-0 shadow-sm" placeholder="Password" id="S_password">
+                  </div>
+                </div> -->
+                <button type="button" onclick="usersignup()" class="btn btn-primary btn-block ks-button" id="signup-btn">Sign Up</button>
+              </form>
+              <!-- Signup form end -->
+
+              <!-- Login Form Start -->
+              <form id="login_Tab" style="display: none;">
+                <div class="form-group">
+
+                   <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text ks-account" id="basic-addon1"><i class="fas fa-mobile"></i></span>
+             </div>
+             <input type="text" class="form-control ks-input" placeholder="Mobile number" aria-label="Username" aria-describedby="basic-addon1" id="L_Mobile">
+                </div>
+
+            <!--       <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text shadow-sm border-0 rounded-0 bg-primary text-white">
+                        <i class="fa fa-phone"></i>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control border-0 shadow-sm rounded-0" placeholder="Mobile Number" id="L_Mobile">
+                  </div> -->
+                </div>
+         <!--        <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text shadow-sm border-0 rounded-0 bg-primary text-white">
+                        <i class="fa fa-lock"></i>
+                      </div>
+                    </div>
+                    <input type="password" class="form-control border-0 rounded-0 shadow-sm" placeholder="Password" id="L_Password">
+                  </div>
+                </div> -->
+
+                     <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text ks-account" id="basic-addon1"><i class="fas fa-key"></i></i></span>
+             </div>
+             <input type="password" class="form-control ks-input" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" id="L_Password">
+                </div>
+                <button onclick="userlogin()" type="button" class="btn btn-primary btn-block ks-button">Login</button>
+                <p class="text-right mb-0 mt-3 text-white"><strong><a onclick="forgetModal()">Forgot Password?</a></strong></p>
+              </form>
+              <!-- Login form End -->
+
+            </div>
+          </div>
+            
+        </div>
+      </div>
+
+    <!-- Modal Start -->
+      
+    <div class="modal fade logi" id="Modal">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content bg-light">
+          <div class="modal-header" style="padding: 25px;">
+            <h6 class="modal-title">Forgot Password</h6>
+            <i class="fas fa-times" data-dismiss="modal"></i>
+          </div>
+          <div class="modal-body" style="padding: 25px;">
+            <div class="form-group mb-0">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text border-0 rounded-0">
+                    <i class="fas fa-mobile"></i>
+                  </div>
+                </div>
+                <input type="text" class="form-control border-0 shadow-sm rounded-0" placeholder="Mobile Number" id="forget_pass">
+                
+                <div class="col-6">
+                    <span class="btn btn-sm rounded-0 button logintabBtn text-light w-100 d-line" style="height: 100%" onclick="forgetpassword()" id="forgetpassword-btn">Send</span>
+                </div>
+              </div>
+             
+          
+            </div>
+          </div>
+     <!--      <div class="modal-footer">
+            <button type="button" class="btn btn-danger rounded-0 shadow-sm btn-sm" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success rounded-0 shadow-sm btn-sm" onclick="forgetpassword()" id="forgetpassword-btn">Send</button>-->
+ <!--          </div> -->
+        </div>
+      </div>
+    </div>
+                  </div>
+              <div class="col-lg-4"></div>
+          </div>
+      </div>
+    <!-- Modal End -->
+
+  <script type="text/javascript" src="css/cdn/js/jquery.min.js"></script>
+  <script type="text/javascript" src="css/cdn/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/myscript.js"></script>
+  <script>
+  //loader
+  $('.loader').hide();
+  </script>
+    </body>
+</html>

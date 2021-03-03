@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kalam Services</title>
+    <link rel="stylesheet" type="text/css" href="css/cdn/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style1.css" />  
+  </head>
+
+  <body class="inde">
+    <div class="container">  
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 logi" style="padding-bottom:25%;">   
+    <img src="image/kalam.png" class="mx-auto d-block img-fluid" alt="Image not available" width="140" style="margin-top: 170px; "> 
+  <!-- <h1 class="mx-auto d-block img-fluid" alt="Image not available" width="140" style="margin-top: 170px; ">TM Clap</h1>-->
+    <center class="">
+      <div class="spinner-grow text-light" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-grow text-success" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <small class="text-white-50"><p>Loading</p></small>
+    </center>
+            </div>
+        <div class="col-lg-4"></div>
+      </div>
+    </div> 
+ 
+    <script type="text/javascript" src="css/cdn/js/jquery.min.js"></script>
+    <script type="text/javascript" src="css/cdn/js/bootstrap.bundle.min.js"></script>
+        <script src="js/myscript.js"></script>
+
+  <script type="text/javascript">
+    /*function redirect() {
+      setInterval(function(){ 
+        window.location.replace("login.html");
+      }, 3000);
+    }
+    redirect();
+    */
+  </script>
+  <script type="text/javascript">
+/*	var value = window.localStorage.getItem("login");
+    if(value=='true'){
+        backgroundworker();
+    }else{ backgroundworker(); }*/
+   </script>
+   
+   
+   <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript">
+	
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() {
+		//alert("device ready");
+		var push = PushNotification.init({
+			android: {
+				senderID: "991751286632"
+			},
+			ios: {
+				alert: "true",
+				badge: "true",
+				sound: "true"
+			},
+			windows: {}
+		});
+
+		push.on('registration', function(data) {
+			//alert("device token: " + data.registrationId);
+			var registrationId = window.localStorage.getItem("registrationId");
+			var userid = window.localStorage.getItem("userid");
+			//alert(userid);
+			if(data.registrationId!=registrationId){
+				window.localStorage.setItem("registrationId",data.registrationId);
+				if(userid === null){}else{
+					
+				//alert("device token local: " + window.localStorage.getItem("registrationId"));
+					updateduoshinfo();
+				}
+			}else{
+				//do noting
+			}
+
+		});
+	}
+	var value = window.localStorage.getItem("login");
+    if(value=='true'){
+        backgroundworker();
+    }else{ backgroundworker(); }
+</script>
+    </body>
+</html>

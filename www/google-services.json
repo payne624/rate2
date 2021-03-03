@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "991751286632",
+    "project_id": "kalam-services",
+    "storage_bucket": "kalam-services.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991751286632:android:84190ed8fb728dfd7bb0dd",
+        "android_client_info": {
+          "package_name": "com.kalamservices.kalamservices"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991751286632-lm7dpnoemkqaqktt5frng3jhegohc8s7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNBykUjdC06_bGO0V539ZoD_IlL2a0suk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991751286632-lm7dpnoemkqaqktt5frng3jhegohc8s7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

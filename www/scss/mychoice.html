@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalam Academy</title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> 
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="loader">
+		<div class="loader-box">
+			<label>
+				<i class="fa fa-spinner fa-spin"></i>
+			</label>
+		</div>
+	</div>
+	<!-- header -->
+	<header>
+		<a href="home.html">
+			<i class="fa fa-arrow-left" aria-hidden="true"></i>
+		</a>
+		<div class="flex-1">
+			<h3>My Choice</h3>
+		</div>
+		<div class="left-icons">
+			<a href="cart.html" class="cart-header">
+				<k id="cart_count"></k>
+				<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+			</a>
+		</div>
+	</header>
+	<!-- header -->
+
+	<!-- sidebar -->
+	<div class="sidebar">
+		<div class="sidebar-box">
+			<div class="sidebar-header">
+				<h2>Hi, Bansal</h2>
+			</div>
+			<ul>
+				<li>
+					<a href="#">
+						<i class="fa fa-home"></i>
+						Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-user"></i>
+						My Account
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-shopping-bag"></i>
+						My Orders
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-shopping-cart"></i>
+						Cart
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-sign-out"></i>
+						Logout
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- sidebar -->
+
+
+	<!-- main -->
+	<div class="my-account-page checkout-page main-content">
+		<!--<div class="total-rate">
+			<table width="100%">
+				<tr>
+					<th align="left">
+						<p><span>Price</span></p>
+					</th>
+					<td>
+						<p>:</p>
+					</td>
+					<td style="padding-left: 10px">
+						<p id="totalamt">₹₹₹</p>
+					</td>
+				</tr>
+				<tr>
+					<th align="left">
+						<p><span>Delivery Charge</span></p>
+					</th>
+					<td>
+						<p>:</p>
+					</td>
+					<td style="padding-left: 10px">
+						<p id="delcharge">₹₹</p>
+					</td>
+				</tr>
+				<tr>
+					<th align="left">
+						<p><span>Coupan Discount</span></p>
+					</th>
+					<td>
+						<p>:</p>
+					</td>
+					<td style="padding-left: 10px">
+						<p id="copdiscount">₹₹</p>
+					</td>
+				</tr>
+				<tr>
+					<th align="left">
+						<div class="enter-code">
+							<input type="text" name="" placeholder="Coupan Code" id="Coupon">
+							<a href="all-coupan.html" class="all-coupan-link" >All coupan</a>
+						</div>
+					</th>
+					<td>
+						<p>:</p>
+					</td>
+					<td style="padding-left: 10px">
+						<a href="javascript:void(0)" class="apply-coupan" onclick="ApplyCoupon()" id="couponbtn">Apply Coupan</a>
+					</td>
+				</tr>
+				<tr style="border-top: 1px solid #4cc3bc;">
+					<th align="left">
+						<p><span>Total</span></p>
+					</th>
+					<td>
+						<p>:</p>
+					</td>
+					<td style="padding-left: 10px">
+						<p id="totalamt1">₹₹₹</p>
+					</td>
+				</tr>
+			</table>
+		</div>-->
+
+		<form id="checkout-form">
+			<fieldset>
+				<input type="text" class="form-control" placeholder="Full Name*" name="" id="Name">
+				<i class="fa fa-user"></i>
+			</fieldset>
+			<fieldset>
+				<input type="number" class="form-control" placeholder="Mobile Number*" name="" id="Mobile">
+				<i class="fa fa-phone"></i>
+			</fieldset>
+			<!--<fieldset>
+				<input type="email" class="form-control" placeholder="Email" name="" id="Email">
+				<i class="fa fa-envelope"></i>
+			</fieldset>-->
+			<!--<fieldset>
+				<input type="text" class="form-control" placeholder="City" name="">
+				<i class="fa fa-address-book-o" aria-hidden="true"></i>
+			</fieldset>-->
+			<!--<fieldset>
+				<input type="text" class="form-control" placeholder="State" name="">
+				<i class="fa fa-address-book-o" aria-hidden="true"></i>
+			</fieldset>-->
+			<fieldset class="textarea-pin">
+				<i class='fa fa-map-pin'></i>
+				<textarea class="form-control" placeholder="Your Product Request*" id="pro_req"></textarea>
+			</fieldset>
+			
+		
+			<fieldset class="mb-0">
+				<input type="submit" class="btn-primary" name="Update" value="New Product Request" onclick="MYChoice()" id="MYChoice-btn">
+				<span class="error" id="MYChoice-Error"></span>
+			</fieldset>
+		</form>
+		<div class="bottom-icon">
+			<ul>
+				<li>
+					<a href="home.html"><i class="fa fa-home"></i><p>Home</p></a>
+				</li>
+				<li>
+					<a href="myorder.html"><i class="fa fa-shopping-bag"></i><p>Order</p></a>
+				</li>
+				<li>
+					<a href="cart.html"><i class="fa fa-shopping-cart"></i><p>Cart</p></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- main -->
+<script src="js/jquery.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/myscript.js"></script>
+<script>
+	var value = window.localStorage.getItem("login");
+	if(value!='true'){
+		window.location.href="index.html";
+	}
+</script>
+</body>
+</html>

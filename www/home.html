@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home - Kalam Services</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/cdn/css/bootstrap.min.css">
+    <link href="css/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style1.css"/>
+    <link rel="stylesheet" href="css/cdn/css/flickity.min.css">
+    <link rel="stylesheet" href="css/style-loader.css"/>
+  </head>
+  
+  <body>
+     <div class="loader">
+		<div class="loader-box">
+			<label>
+				<div class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+			</label>
+		</div>
+	</div>
+    <!-- Main Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-sm-start fixed-top main-navbar" style="height: 55px;">
+      <div class="container">
+        <a class="navbar-brand order-1 mx-auto" href="account.html" id="image1" style="padding-left:5px;" 
+          >Home Care<strong></strong></a >
+    <img src="image/whatsapp2.png" class="img-fluid order-2" alt="booking" onclick="var ab=window.localStorage.getItem('Whatsapp'); window.location.href='https://api.whatsapp.com/send?phone='+ab+'&text=Hey%20I%20Required%20Your%20Service'">
+        <img src="image/lines2.png" class="img-fluid align-self-start nav-toggler" alt="booking" id="image">
+
+        <div class="navbar-nav align-self-stretch bg-white d-flex flex-column  mobileMenu">
+          <ul class="navbar-nav align-self-stretch">
+            <li class="nav-item mt-4 mx-3">
+              <div class="row">
+                <div class="col-4 text-right" style="padding-left: 40px;">
+                  <img src="image/profile.png" class="rounded-circle img-fluid mt-1" alt="Image not available" width="120">
+                </div>
+                <div class="col-8" style="padding: 0px;margin-bottom: 10px;">
+                  <div class="text-left" style="margin-top:25px;">
+                    <h6><k id="UserName"></k></h6>
+                    <!--<p>pallavrj001@gmail.com</p>-->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item py-1 li-home home">
+              <a class="nav-link mx-4 active" style="color:#fff" href="home.html"
+                ><i class="fa fa-home ks-icon-sidebar-active"></i>&nbsp;&nbsp;Home</a
+              >
+            </li>   
+            <li class="nav-item py-1">
+              <a class="nav-link mx-4 active" href="booking.html"
+                > <i class="fas fa-calendar-check ks-icon-sidebar"></i>&nbsp;&nbsp;Bookings</a
+              >
+            </li>
+            <li class="nav-item py-1">
+              <a class="nav-link mx-4 active" href="wallet.html"> 
+              <i class="far fa-money-bill-alt ks-icon-sidebar"></i>&nbsp;&nbsp;My Wallet</a
+              >
+            </li>
+                        <li class="nav-item py-1">
+              <a class="nav-link mx-4 active" href="#" onClick="window.plugins.socialsharing.share('Download HC App from playstore you can order grocery via this mobile app. Use my code HC'+window.localStorage.getItem('userid')+' to get Rs '+window.localStorage.getItem('ref_bal')+'/- in your wallet', null, null, 'https://play.google.com/store/apps/details?id=com.Homecare.Homecare')">
+                <i class="fa fa-gift ks-icon-sidebar"></i>&nbsp;&nbsp;Refer & Earn</a
+              >
+            </li>
+
+            
+            <li class="nav-item py-1 ">
+              <a class="nav-link mx-4 active" href="account.html"
+                ><i class="fa fa-user ks-icon-sidebar"></i>&nbsp;&nbsp;My Account</a>
+            </li>
+             <li class="nav-item py-1 ">
+              <a class="nav-link mx-4 active" href="mychoice.html"
+                ><i class="fa fa-comment ks-icon-sidebar"></i>&nbsp;&nbsp;My Need</a>
+            </li>
+            <li class="nav-item py-1 ">
+              <a class="nav-link mx-4 active" href="#" onClick="window.plugins.socialsharing.share('Download Homecare Services App from playstore', null, null, 'https://play.google.com/store/apps/details?id=com.Homecare.Homecare')">
+                  <i class="fa fa-share-alt ks-icon-sidebar"></i>&nbsp;&nbsp;Share This App</a>
+            </li>
+            <!-- <li class="nav-item py-1 ">
+              <a class="nav-link mx-4 active" href="review.html"
+                ><i class="fa fa-star ks-icon-sidebar"></i>&nbsp;&nbsp;Rating & Review</a>
+            </li> -->
+            
+                   <li class="nav-item py-1 mb-4">
+              <a class="nav-link mx-4 active" href="help.html"
+                ><i class="fas fa-question ks-icon-sidebar"></i>&nbsp;&nbsp;Help</a
+              >
+            </li>
+            <div class="mt-4 hr mx-3"></div>
+            <li class="nav-item">
+              <div class="d-flex flex-column mx-4 mt-4 text-left">
+                <h6>@ Contact Us</h6>
+                <p class="mb-0" id="conMobile">+91 7291861975</p>
+                <p class="mt-1" id="conEmail">contactus@gmail.com</p>
+              </div>
+            </li>
+            <li class="nav-item" onclick="UserLogout();">
+              <a class="nav-link mx-4" href="#" style="font-weight: bold;color: #000"><i class="fas fa-sign-out-alt ks-icon-sidebar"></i>&nbsp;&nbsp;Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Navbar End -->
+    <div class="overlay"></div>
+
+    <div class="container ks-search">  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search for services" id="searchtxt">
+    <div class="input-group-append">
+      <button class="btn btn-secondary ks-search-button" type="button" onclick="searchFucntion()">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div></div>
+
+
+    <!-- Flickity HTML init -->
+<div class="carousel js-flickity"
+data-flickity-options='{ "freeScroll": true, "wrapAround": true, "autoPlay": true }' style="margin-top: 125px;" id="newbanner">
+  <div class="carousel-cell">
+    <img src="image/1.png" class="d-block w-100 img-fluid" alt="..." style="border-radius: 12px;">
+  </div>
+  <div class="carousel-cell">
+    <img src="image/2.png" class="d-block w-100 img-fluid" alt="..." style="border-radius: 12px;">
+  </div>
+  <div class="carousel-cell">
+    <img src="image/3.png" class="d-block w-100 img-fluid" alt="..." style="border-radius: 12px;">
+  </div>
+</div>
+
+    <!-- My Account form start -->
+    <div class="container pb-4 mb-5">
+      <!-- <div class="row">
+        <div class="col-sm-12">
+          <h6>Need a help?</h6>
+        </div>
+      </div> -->
+
+    <div class="d-flex mt-4 mt-o">
+      <div class="mr-auto">
+        <h5 class="font-weight-bold">Our Services</h5>
+      </div>
+      <div style="margin-top: 40px;">
+       <!-- <a href="#"><h6>View all</h6></a>-->
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <!-- <div class="row"> -->
+        <k id="allser" class="row"></k>
+       
+       <!--- <div class="ks-category">
+          <div class="ks-c"><img src="image/ks1.png" class="img-fluid" alt="Image not available"></div>
+          <h5 class="ks-c-text">Automobile<p class="ks-c-text2">Starting from &#8377; 499</p></h5>
+        </div>
+
+        <div class="ks-category">
+          <div class="ks-c"><img src="image/ks2.jpg" class="img-fluid" alt="Image not available"></div>
+          <h5 class="ks-c-text">Massage<p class="ks-c-text2">Starting from &#8377; 299</p></h5>
+        </div>
+          <div class="ks-category">
+          <div class="ks-c"><img src="image/ks3.jpg" class="img-fluid" alt="Image not available"></div>
+          <h5 class="ks-c-text">Carpenter<p class="ks-c-text2">Starting from &#8377; 199</p></h5>
+        </div>
+         <div class="ks-category">
+          <div class="ks-c"><img src="image/ks4.jpg" class="img-fluid" alt="Image not available"></div>
+          <h5 class="ks-c-text">Plumber<p class="ks-c-text2">Starting from &#8377; 99</p></h5>
+        </div>
+           <div class="ks-category">
+          <div class="ks-c"><img src="image/ks5.jpg" class="img-fluid" alt="Image not available"></div>
+          <h5 class="ks-c-text">Painter<p class="ks-c-text2">Starting from &#8377; 599</p></h5>
+        </div>
+
+        <div class="ks-category"><div class="ks-c"><img src="image/ks6.jpg" class="img-fluid" alt="Image not available"></div><h5 class="ks-c-text">Electrician<p class="ks-c-text2">Starting from &#8377; 199</p></h5></div>
+-->
+      </div>
+  
+   
+  
+    </div>
+    <!-- My Account form end -->
+
+    <!-- Bottom Navbar Start -->
+    <nav class="navbar navbar-expand-lg justify-content-sm-start fixed-bottom shadow-lg bottom-navbar">
+      <div class="container-fluid text-center" id="nev-btnn">
+
+          <div class="align-self-start" id="nev-btnn">
+          <a href="home.html">
+            <i class="fa fa-home ks-bottom-active"></i>
+            <p class="mb-0 text-bottom nav-bottom-text"><!-- Home --></p>
+          </a>
+        </div>
+
+        <div>
+        <a class=" order-lg-0" href="booking.html"
+          >
+         <!--  <i class="fa fa-check-square-o fa-bottom mb-1"></i> -->
+          <i class="fas fa-calendar-check ks-bottom"></i>
+          <p class="mb-0 text-bottom nav-bottom-text"><!-- Booking --></p>
+        </a
+        ></div>
+
+               <div class="align-self-start" id="nev-btnn">
+          <a href="help.html">
+           <i class="fas fa-question ks-bottom"></i>
+            <p class="mb-0 text-bottom nav-bottom-text"><!-- Category --></p>
+          </a>
+        </div>
+        <div class="" id="nev-btnn">
+          <a href="account.html">
+            <i class="fa fa-user ks-bottom"></i>
+            <p class="mb-0 text-bottom nav-bottom-text"><!-- Profile --></p>
+          </a>
+        </div>
+        
+      
+    
+      </div>
+    </nav>
+    <!-- Bottom Navbar End -->
+
+    <script type="text/javascript" src="css/cdn/js/jquery.min.js"></script>
+    <script type="text/javascript" src="css/cdn/js/bootstrap.bundle.min.js"></script>
+    <script src="css/cdn/js/flickity.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="js/myscript.js"></script>
+    <script>
+       
+       var value = window.localStorage.getItem("login");
+	   if(value!='true'){
+		    window.location.href="index.html";
+	   }
+	   loadbanner(); loadcategory();
+	   var Mobile = window.localStorage.getItem("Mobile"); var Email = window.localStorage.getItem("Email");
+	   $("#conMobile").html("<a href='tel:"+Mobile+"'>"+Mobile+"</a>"); $("#conEmail").html("<a href='mailto:"+Email+"'>"+Email+"</a>");
+	   $("#UserName").html(window.localStorage.getItem("UserName")); 
+
+	   function myFunction() {$('.loader').hide();}
+     setTimeout(myFunction, 2000);
+     //  $('.loader').hide();
+       
+    </script>
+     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/SocialSharing.js"></script>
+
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+  </body>
+</html>

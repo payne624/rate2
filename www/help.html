@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Bookings - Kalam Services</title>
+     <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/cdn/css/bootstrap.min.css">
+    <link href="css/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style1.css" />
+      <link rel="stylesheet" href="css/style-loader.css"/>
+  </head>
+
+  <body>
+      <div class="loader">
+		<div class="loader-box">
+			<label>
+				<div class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+			</label>
+		</div>
+	</div>
+    <!-- Main Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-sm-start fixed-top main-navbar" style="height: 55px;border-bottom: 0.5px solid 
+    lightgrey">
+      <div class="container-fluid">
+        <a class="navbar-brand order-1 mx-auto" href="booking.html"
+          >Help</a
+        >
+        <img src="image/whatsapp2.png" class="img-fluid order-2" alt="booking" onclick="var ab=window.localStorage.getItem('Whatsapp'); window.location.href='https://api.whatsapp.com/send?phone='+ab+'&text=Hey%20I%20Required%20Your%20Service'">
+        <div class="align-self-start">
+          <a href="home.html">
+            <i class="fa fa-arrow-left" style="color: #ed363a"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Navbar End -->
+
+    <!-- My Account form start -->
+    <div class="container py-4 my-5">
+     <!-- <form class="input-group w-100 shadow-sm">
+        <div class="input-group-append">
+          <button class="btn input-group-text bg-white border-0 rounded-0"><i class="fa fa-search text-info"></i></button>
+        </div>
+        <input type="search" name="user_query" class="form-control border-0 rounded-0" placeholder="Search all bookings">
+        <div class="input-group-append">
+          <button class="btn bg-white dropdown-toggle rounded-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</button>
+          <div class="dropdown-menu shadow rounded-0 border-0 mr-2">
+            <div class="form-check mx-3">
+              <input class="form-check-input filter-input" type="checkbox" value="">
+              <label class="form-check-label">
+                IN PROCESS
+              </label>
+            </div>
+            <div role="separator" class="dropdown-divider"></div>
+              <div class="form-check mx-3">
+                <input class="form-check-input filter-input" type="checkbox" value="">
+                <label class="form-check-label">
+                  PAID
+                </label>
+              </div>
+            <div role="separator" class="dropdown-divider"></div>
+              <div class="form-check mx-3">
+                <input class="form-check-input filter-input" type="checkbox" value="">
+                <label class="form-check-label">
+                  DECLINED
+                </label>
+              </div>
+          </div>
+        </div>
+      </form> -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h5 class="mt-2 text-center mb-4 mt-4">For any help contact us on </h5>
+
+          <div class="text-center ks-contact"><i class="fas fa-phone-alt"></i> <k id="conMobile"> +91 7291861975</k></div>
+          <div class="text-center ks-contact"><i class="fas fa-envelope"></i> <k id="conEmail">Business@Kalamacademy.org</k></div>
+          <div class="text-center ks-contact" onclick="var ab=window.localStorage.getItem('Whatsapp'); window.location.href='https://api.whatsapp.com/send?phone='+ab+'&text=I%20am%20intrested%20in%20this%20business%20.Tell%20me%20more%20about%20it'"><i class="fab fa-whatsapp"></i> +<k id="wsap">91 62073 36455</k></div>
+        </div>
+      </div>
+     
+
+
+       
+    <!-- Bottom Navbar Start -->
+ <nav class="navbar navbar-expand-lg justify-content-sm-start fixed-bottom shadow-lg bottom-navbar">
+      <div class="container-fluid text-center" id="nev-btnn">
+
+          <div class="align-self-start" id="nev-btnn">
+          <a href="home.html">
+            <i class="fa fa-home ks-bottom"></i>
+            <p class="mb-0 text-bottom nav-bottom-text"><!-- Home --></p>
+          </a>
+        </div>
+
+        <div>
+        <a class=" order-lg-0" href="booking.html"
+          >
+         <!--  <i class="fa fa-check-square-o fa-bottom mb-1"></i> -->
+          <i class="fas fa-calendar-check ks-bottom"></i>
+          <p class="mb-0 text-bottom nav-bottom-text"><!-- Booking --></p>
+        </a
+        ></div>
+
+               <div class="align-self-start" id="nev-btnn">
+          <a href="home.html">
+           <i class="fas fa-question ks-bottom-active"></i>
+            <p class="mb-0 text-bottom nav-bottom-text"><!-- Category --></p>
+          </a>
+        </div>
+        <div class="" id="nev-btnn">
+          <a href="account.html">
+            <i class="fa fa-user ks-bottom"></i>
+            <p class="mb-0 text-bottom nav-bottom-text"><!-- Profile --></p>
+          </a>
+        </div>
+        
+      
+    
+      </div>
+    </nav>
+    </div>
+    <!-- Bottom Navbar End -->
+
+    <script type="text/javascript" src="css/cdn/js/jquery.min.js"></script>
+    <script type="text/javascript" src="css/cdn/js/bootstrap.bundle.min.js"></script>
+     <script src="js/myscript.js"></script>
+    <script>
+     var value = window.localStorage.getItem("login");
+	   if(value!='true'){
+		    window.location.href="index.html";
+	   }
+
+var Mobile = window.localStorage.getItem("Mobile"); var Email = window.localStorage.getItem("Email");
+     $("#conMobile").html("<a href='tel:"+Mobile+"'><k style='color:#212529'>"+Mobile+"</k></a>"); $("#conEmail").html("<a href='mailto:"+Email+"'><k style='color:#212529'>"+Email+"</k></a>");
+     $("#UserName").html(window.localStorage.getItem("UserName")); //Whatsapp
+      $("#wsap").html(window.localStorage.getItem("Whatsapp"));
+	   setTimeout(myFunction, 1500);
+	   
+	   function myFunction() {$('.loader').hide();}
+	  </script> 
+  </body>
+</html>

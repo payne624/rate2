@@ -1,0 +1,42 @@
+.loader{
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index:1032;
+}
+.loader-box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+.loader-box label{
+	height: 60px;
+	width: 60px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.loader-box i{
+	color: #fff;
+	font-size: 24px;
+}
+@media (min-width: 966px)
+{ 
+ .loader{
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 28vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index:1032;
+    margin-left: 485px;
+   }  
+    
+}

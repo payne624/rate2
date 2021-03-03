@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.Homecare.Homecare" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Home Care</name>
+    <description>  
+Start Your Business With Kalam Academy
+  </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+       Kalam Academy Team
+    </author>
+    <content src="index.html" />
+    <preference name="ErrorUrl" value="index.html"/>
+    <preference name="DisallowOverscroll" value="true" />
+    
+	<preference name="android-minSdkVersion" value="14" />
+	<preference name="android-targetSdkVersion" value="29" />
+    
+
+   
+    <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    
+    <plugin name = "cordova-plugin-x-socialsharing" source="npm" version="5.4.0" />
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    </feature>
+    
+     <preference name="phonegap-version" value="cli-7.1.0" />
+     <preference name="loadUrlTimeoutValue" value="30000" />
+
+<!--	<plugin name="phonegap-plugin-push" spec="2.0.0" />
+	
+	<platform name="android">
+		<resource-file src="google-services.json" target="google-services.json" />
+	</platform>
+-->
+
+    <platform name="android">
+		<icon src="icon.png"/> 
+    </platform>
+   
+    
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>
